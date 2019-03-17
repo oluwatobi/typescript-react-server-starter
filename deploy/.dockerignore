@@ -1,0 +1,9 @@
+deploy/
+README.md
+node_modules/
+lerna-debug.log
+npm-debug.log
+.idea
+coverage/
+dist/
+package-lock.json

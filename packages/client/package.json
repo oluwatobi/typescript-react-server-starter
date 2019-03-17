@@ -1,0 +1,69 @@
+{
+  "name": "@typescript-react-server-starter/client",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "React Application",
+  "author": "Your name here",
+  "license": "ISC",
+  "scripts": {
+    "test": "jest --no-cache --collectCoverage",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "@types/react": "^16.8.8",
+    "@types/react-dom": "^16.8.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/jest-when": "^1.1.4",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.5.0",
+    "jest-cli": "^24.5.0",
+    "jest-when": "^2.3.1",
+    "ts-jest": "^24.0.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "tsx",
+      "ts",
+      "js"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/(\\..*)"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "./tsconfig.json"
+      }
+    },
+    "coverageReporters": [
+      "json",
+      "text",
+      "lcov",
+      "clover"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branch": 0,
+        "lines": 0
+      }
+    },
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.ts",
+      "<rootDir>/src/**/*.tsx",
+      "<rootDir>/src/**/*.js"
+    ]
+  },
+  "private": true
+}

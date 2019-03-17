@@ -1,0 +1,74 @@
+{
+  "name": "@typescript-react-server-starter/server",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "Server for the typescript-react-server-starter web application",
+  "author": "Oluwatobi Oni-Orisan",
+  "license": "ISC",
+  "main": "lib/server.js",
+  "scripts": {
+    "test": "jest --no-cache --collectCoverage",
+    "start": "ts-node --pretty -T -r tsconfig-paths/register src/server.tsx",
+    "watch": "nodemon --config nodemon.dev.json"
+  },
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-proxy": "^0.9.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "ts-node": "^8.0.3",
+    "tsconfig-paths": "^3.8.0",
+    "typescript": "^3.3.3333"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@types/jest": "^24.0.11",
+    "@types/jest-when": "^1.1.4",
+    "@types/koa": "^2.0.48",
+    "@types/koa-router": "^7.0.40",
+    "babel-core": "^6.26.3",
+    "jest": "^24.3.1",
+    "jest-cli": "^24.5.0",
+    "jest-when": "^2.3.1",
+    "nodemon": "^1.18.10",
+    "ts-jest": "^24.0.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "@middleware/(.*)": "<rootDir>/src/middleware/$1"
+    },
+    "moduleFileExtensions": [
+      "tsx",
+      "ts",
+      "js"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/(\\..*)"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "./tsconfig.json"
+      }
+    },
+    "coverageReporters": [
+      "json",
+      "text",
+      "lcov",
+      "clover"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branch": 0,
+        "lines": 0
+      }
+    },
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.tsx",
+      "<rootDir>/src/**/*.js"
+    ]
+  },
+  "private": true
+}

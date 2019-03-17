@@ -1,0 +1,24 @@
+{
+ "extends": "../../tsconfig.json",
+ "compilerOptions": {
+   "outDir": "lib",
+   "moduleResolution": "node",
+   "noUnusedLocals": true,
+   "baseUrl": "./",
+   "jsx": "preserve",
+   "paths": {
+     "@middleware/*": ["src/middleware/*"],
+     "@routes/*": ["src/routes/*"]
+   }
+ },
+ "compileOnSave": false,
+ "include": [
+   "src/**/*.tsx"
+ ],
+ "exclude": [
+   "src/**/__mocks__/*",
+   "test/**/*.ts",
+   "test/**/*.tsx",
+   "test/**/*.js"
+ ]
+}
