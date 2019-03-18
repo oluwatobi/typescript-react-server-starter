@@ -1,0 +1,7 @@
+{
+  "ignoreRoot": [".git"],
+  "exec": "ts-node --pretty --type-check -r tsconfig-paths/register src/server.tsx",
+  "ext": "tsx json",
+  "ignore": ["node_modules/*", "test/*"],
+  "watch": ["./"]
+}
