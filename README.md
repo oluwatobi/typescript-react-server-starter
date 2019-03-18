@@ -29,10 +29,10 @@ an understanding of how the development landscape works, its pretty useful and
 can save a lot time and dev cycles as opposed to running different repos.
 
 - To run tests
-  - For one module: lerna run test --scope=<package name>
-  - For all modules: lerna run test
+  - For one module: `lerna run test --scope=<package name>`
+  - For all modules: `lerna run test`
 - To start one of the modules (NOTE: only `server` and `client` have the `start` script defined)
-  - For one module: lerna run start --scope=<package name>
+  - For one module: `lerna run start --scope=<package name>`
 
 When running the React Application we use webpack to create a proxy to the
 server code. The proxy will forward all requests from the UI to the front-end
