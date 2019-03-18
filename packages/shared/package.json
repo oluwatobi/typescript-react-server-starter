@@ -1,8 +1,8 @@
 {
   "name": "@typescript-react-server-starter/shared",
   "version": "1.0.0-SNAPSHOT",
-  "description": "Commons module for the typescript-react-server-starter frontend application",
-  "author": "Oluwatobi Oni-Orisan",
+  "description": "Commons module for the typescript-react-server-starter front-end application",
+  "author": "<Your Name>",
   "license": "ISC",
   "main": "lib/shared.js",
   "directories": {

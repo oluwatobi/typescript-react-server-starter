@@ -2,7 +2,7 @@
   "name": "@typescript-react-server-starter/server",
   "version": "1.0.0-SNAPSHOT",
   "description": "Server for the typescript-react-server-starter web application",
-  "author": "Oluwatobi Oni-Orisan",
+  "author": "<Your Name>",
   "license": "ISC",
   "main": "lib/server.js",
   "scripts": {
