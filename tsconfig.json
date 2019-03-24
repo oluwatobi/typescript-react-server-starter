@@ -1,16 +1,23 @@
 {
- "compilerOptions": {
-   "module": "commonjs",
-   "declaration": true,
-   "noImplicitAny": false,
-   "removeComments": true,
-   "emitDecoratorMetadata": true,
-   "experimentalDecorators": true,
-   "target": "es6",
-   "sourceMap": true,
- },
- "exclude": [
-   "node_modules",
-   "test/**/*.test.tsx"
- ]
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es6",
+  },
+  "compileOnSave": false,
+  "include": [
+    "./src"
+  ],
+  "exclude": [
+    "node_modules",
+    "test/**/*.test.tsx"
+  ]
 }

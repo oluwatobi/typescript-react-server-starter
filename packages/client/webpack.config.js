@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const PROXY_PORT = 3000;
 
@@ -10,14 +11,15 @@ module.exports = {
   entry: './src/client.tsx',
   // Resolve file extensions with .tsx, .ts and .js
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js', '.scss']
   },
   // The output property such as ./dist (default for Webpack 4)
   // tells Webpack where to output the bundles it creates and
   // how to name them.
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.min.js'
+    filename: 'bundle.min.js',
+    publicPath: '/'
   },
   module: {
     // All files with the extension .tsx or .ts should be processed
@@ -26,6 +28,14 @@ module.exports = {
       {
         test: /\.tsx?$/,
         loader: 'ts-loader'
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
@@ -35,6 +45,11 @@ module.exports = {
     // serve our Webpack bundles
     new HtmlWebpackPlugin({
       template: './src/index.html'
+    }),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: 'style.css'
     })
   ],
   // This set of options is picked up by webpack-dev-server and can be used to
