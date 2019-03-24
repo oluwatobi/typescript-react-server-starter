@@ -1,26 +1,17 @@
 {
- "compilerOptions": {
-    "sourceMap": true,
-    "noImplicitAny": false,
-    "module": "commonjs",
-    "target": "es6",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "jsx": "react",
     "lib": [
       "es2015",
       "es2017",
       "dom"
     ],
-    "removeComments": true,
-    "allowSyntheticDefaultImports": false,
-    "jsx": "react",
-    "allowJs": true,
-    "baseUrl": "./",
     "paths": {
       "components/*": [
         "src/components/*"
       ],
     }
-  },
- "include": [
-   "./src"
- ]
+  }
 }
