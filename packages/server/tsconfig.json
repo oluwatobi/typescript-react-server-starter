@@ -1,7 +1,8 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "lib",
+    "outDir": "./dist",
+    "allowJs": false,
     "moduleResolution": "node",
     "baseUrl": "./",
     "jsx": "preserve",
@@ -11,7 +12,7 @@
     }
   },
   "include": [
-    "src/**/*.tsx"
+    "src/**/*.ts"
   ],
   "exclude": [
     "src/**/__mocks__/*",
